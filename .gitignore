@@ -1,0 +1,28 @@
+# Build directories
+bin/
+obj/*
+
+obj
+
+# Visual Studio files
+*.user
+*.suo
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+
+# Rider files
+.idea/
+
+# User-specific files
+*.userprefs
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Backup files
+*~

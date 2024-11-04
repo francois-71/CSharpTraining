@@ -111,6 +111,25 @@ class Library
         return result;
     }
 
+    public void PrintUnavailableBooks()
+    {
+        List<Book> result;
+        result = new List<Book>();
+
+        foreach (var book in Books)
+        {
+            if (book.AvailabilityStatus.Equals(AvailabilityStatus.NOT_AVAILABLE))
+            {
+                result.Add(book);
+            }
+        }
+
+        foreach (var item in result)
+        {
+            System.Console.WriteLine($"Not available: {item.Title} - {item.Author} - {item.DateTime} - {item.ISBN}");
+        }
+    }
+
     public void PrintAvailableBooks()
     {
         List<Book> result;
@@ -126,12 +145,14 @@ class Library
 
         foreach (var item in result)
         {
-            System.Console.WriteLine($"AVAILABLE: {item.Title} - {item.Author} - {item.DateTime} - {item.ISBN}");
+            System.Console.WriteLine($"Available: {item.Title} - {item.Author} - {item.DateTime} - {item.ISBN}");
         }
     }
 
-    public void printTransactions(){
-        foreach (var transaction in _allTransactions){
+    public void printTransactions()
+    {
+        foreach (var transaction in _allTransactions)
+        {
             System.Console.WriteLine($"Transaction Date: {transaction.DateTime} - Transaction {transaction.TransactionID} - Transaction Type: {transaction.TransactionType}");
         }
     }

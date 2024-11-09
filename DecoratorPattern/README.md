@@ -19,3 +19,5 @@ We create a decorator (an abstract class) that implements the ICoffee interface.
 Let’s say we want to add milk to our coffee. Instead of creating an addMilk function in the base component, we create a subclass of the decorator that implements the ICoffee interface, and we redefine the relevant functions with updates that reflect adding milk, such as increasing the price of the coffee.
 
 We then receive our Coffee object, assign it to a private ICoffee instance, and that new instance takes on all the updated methods, making it a modified coffee—no longer a plain Coffee, but a coffee with milk.
+
+Also note that method in the abstract Decoractor class uses virtual methods. In our case where we have only 2 decorators that implement all the methods present in the Decorator abstract class, we could also define them as abstract.

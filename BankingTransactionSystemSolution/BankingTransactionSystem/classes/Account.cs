@@ -16,7 +16,7 @@ namespace classes
         {
             if (Balance - amount < 0)
             {
-                throw new ArgumentOutOfRangeException("Balance is too low ");
+                throw new InvalidOperationException("Balance is too low ");
             }
             else
             {

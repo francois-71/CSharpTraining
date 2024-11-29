@@ -9,7 +9,7 @@ namespace program
             // Open a bank account
             Bank bank = new();
 
-            int francoisBankID = bank.CreateAccount("Francois", 20);
+            int francoisBankID = bank.CreateAccount("Francois", 25);
             int geoffreyBankID = bank.CreateAccount("Geoffrey");
             
             bank.Deposit(francoisBankID, 30);
